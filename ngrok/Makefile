@@ -43,7 +43,7 @@ clean:
 
 token:
 	@if [ ! -e .env ]; then\
-		echo Please run first: make bootstrap; exit 1; \
+		echo Please run first: make config; exit 1; \
 	else  \
 		echo "Paste your token or CTRL+C to cancel:";\
 		read TOKEN; \
@@ -59,9 +59,7 @@ token:
 
 config:
 	@echo "PORT=11434" > .env
-	@echo "CONTAINER_NAME=ngrok-local" >> .env
-	@echo "IMAGE_NAME=ngrok-local" >> .env
-	@make update-token
+	@make token
 
 writemd:
 	@echo "# Makefile Commands" > README.md
