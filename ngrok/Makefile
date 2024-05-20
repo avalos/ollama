@@ -30,7 +30,7 @@ build:
 	docker build -t $(CONTAINER_NAME) .
 
 run:
-	docker run -d --rm --env-file .env --name $(CONTAINER_NAME) -t $(CONTAINER_NAME)
+	docker run -d --rm --env-file .env --network host --name $(CONTAINER_NAME) -t $(CONTAINER_NAME)
 
 logs:
 	docker logs $$(docker ps -q -f name=$(CONTAINER_NAME))
