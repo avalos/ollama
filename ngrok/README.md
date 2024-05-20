@@ -1,23 +1,37 @@
 # Makefile Commands
 
-## config
+
+
+## make config
 Write default variables to .env and invoke update-token
 
-## token
+
+
+## make token
 Prompt for a token and update NGROK_AUTHTOKEN in the .env file
 
-## logs
+
+
+## make logs
 Show logs of the running container 
 
-## build
+
+
+## make build
 Build the Docker image named ngrok-local
 
-## run
+
+
+## make run
 Run the Docker container in detached mode with environment variables 
 
-## stop
+
+
+## make stop
 Stop the running container
 
-## clean
+
+
+## make clean
 Remove the Docker image
 
