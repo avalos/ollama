@@ -65,10 +65,9 @@ writemd:
 	@echo "# Makefile Commands" > README.md
 	@echo "" >> README.md
 	@$(foreach cmd,$(HELP_CMDS), \
-		echo "" >> README.md; \
+		echo "<BR><BR>" >> README.md; \
 		echo "" >> README.md; \
 		echo "## make $(cmd)" >> README.md; \
 		echo "$($(cmd)_DESC)" >> README.md; \
-		echo "" >> README.md; \
 	)
 
